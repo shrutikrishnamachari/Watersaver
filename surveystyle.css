@@ -1,12 +1,13 @@
 
-.jumbotron {
+body{
 	margin-bottom: 20px;
-    background-image: url(original.jpg);
+    background-image: url("http://www.cocoawaterworks.com/wp-content/themes/cocoa/images/water-bg.png");
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-shadow: black 0.3em 0.3em 0.3em;
+    background-position: left top;
 }
 
 
