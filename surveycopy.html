@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Water Usage Survey</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+
+<script>
+
+
+function totalGals(){
+  var totalGal = 0;
+
+  if (document.getElementById("select1").value == "Standard"){
+    showerType = false;
+  }else{
+    showerType = true;
+  }
+  if (value2 == "Standard"){
+    bFaucetType = false;
+  }else{
+    bFaucetType = true;
+  }
+  if (value3 == "Standard"){
+    kFaucetType = false;
+  }else{
+    kFaucetType = true;
+  }
+  if (value4 == "Standard"){
+    oFaucetType = false;
+  }else{
+    oFaucetType = true;
+  }
+  if (value5 == "Standard"){
+    washingMachineType = false;
+  }else{
+    washingMachineType = true;
+  }
+  if (value6 == "Standard"){
+    dishWasherType = false;
+  }else{
+    dishWasherType = true;
+  }
+  if (value7 == "Older"){
+    toiletType = false;
+  }else{
+    toiletType = true;
+  }
+var showerType, bFaucetType, kFaucetType, oFaucetType, washingMachineType, dishWasherType, toiletType;
+var showerTimes = Number(document.getElementById("showeroften").value);
+var showerMins= Number(document.getElementById("showertime").value);
+var bFaucetTimes= Number(document.getElementById("bathfaucetoften").value);
+var bFaucetMins= Number(document.getElementById("bathfaucettime").value);
+var kFaucetTimes= Number(document.getElementById("kitchenfaucetoften").value);
+var kFaucetMins= Number(document.getElementById("kitchenfaucettime").value);
+var oFaucetTimes= Number(document.getElementById("otherfaucetoften").value);
+var oFaucetMins= Number(document.getElementById("otherfaucettime").value);
+var washingMachineTimes= Number(document.getElementById("washingmachineoften").value);
+var dishWasherTimes= Number(document.getElementById("dishwasheroften").value);
+var toiletTimes= Number(document.getElementById("toiletoften").value);
+
+ if showerType{
+showerGal = 7 * (showerTimes * (showerMins * 2));
+}else{
+showerGal = 7 * (showerTimes * (showerMins * 5));
+}
+if bFaucetType{
+faucetGal += 7 * (bFaucetTimes * (bFaucetMins * 0.5));
+}else{
+faucetGal += 7 * (bFaucetTimes * (bFaucetMins * 2.5));
+}
+if kFaucetType{
+faucetGal += 7 * (kFaucetTimes * (kFaucetMins * 0.5));
+}else{
+faucetGal += 7 * (kFaucetTimes * (kFaucetMins * 2.5));
+}
+if bFaucetType{
+faucetGal += 7 * (oFaucetTimes * (oFaucetMins * 0.5));
+}else{
+faucetGal += 7 * (oFaucetTimes * (oFaucetMins * 2.5));
+}
+if washingMachineType{
+washingMachineGal = washingMachineTimes * 22.5;
+}else{
+washingMachineGal = washingMachineTimes * 37;
+}
+if dishWasherType{
+dishWasherGal = dishWasherTimes * 5.5;
+}else{
+dishWasherGal = dishWasherTimes * 12.5;
+}
+if toiletType{
+toiletGal = 7* (toiletTimes * 1.6);
+}else{
+toiletGal = 7 * (toiletTimes * 5);
+}
+
+   
+totalGal = showerGal + faucetGal + washingMachineGal + dishWasherGal + toiletGal;
+ alert(totalGal);
+}
+
+
+
+
+
+
+</script>
+
+
+<body>
+
+	<h1> Water Usage Survey </h1>
+  <!-- <form class="form-horizontal" role="form" method="get" action="simpleform.asp"> -->
+	<h2>Showers</h2>
+	<select  id="select1" required>
+	<option value1="">Select</option>
+  <option value1="Standard">Standard</option>
+  <option value1="Energy Saving">Energy Saving</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How often do you shower per day?:</label>
+ <input type="text" class="form-control" id="showeroften">
+</div>
+
+<div class="form-group">
+  <label for="usr">How long are your showers (in minutes)?:</label>
+  <input type="text" class="form-control" id="showertime">
+</div>
+	<h3>Faucets</h3>
+	<p>Bathroom Faucets</p>
+	<select required>
+	<option value2="">Select</option>
+  <option value2="Standard">Standard</option>
+  <option value2="Energy Saving">Energy Saving</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How often do you use this faucet per day?:</label>
+  <input type="text" class="form-control" id="bathfaucetoften">
+</div>
+
+<div class="form-group">
+  <label for="usr">How long is each use (in minutes)?:</label>
+  <input type="text" class="form-control" id="bathfaucettime">
+ </div>
+ 	<p>Kitchen Faucets</p>
+ 	<select required>
+	<option value3="">Select</option>
+  <option value3="Standard">Standard</option>
+  <option value3="Energy Saving">Energy Saving</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How often do you use this faucet per day?:</label>
+  <input type="text" class="form-control" id="kitchenfaucetoften">
+</div>
+
+<div class="form-group">
+  <label for="usr">How long is each use (in minutes)?:</label>
+  <input type="text" class="form-control" id="kitchenfaucettime">
+ </div>
+ 	<p>Other Faucets</p>
+ 	<select required>
+	<option value4="">Select</option>
+  <option value4="Standard">Standard</option>
+  <option value4="Energy Saving">Energy Saving</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How often do you use this faucet per day?:</label>
+  <input type="text" class="form-control" id="otherfaucetoften">
+</div>
+
+<div class="form-group">
+  <label for="usr">How long is each use (in minutes)?:</label>
+  <input type="text" class="form-control" id="otherfaucettime">
+ </div>
+
+ 	<h4>Washing Machines</h4>
+	<select required>
+	<option value5="">Select</option>
+  <option value5="Standard">Standard</option>
+  <option value5="High Efficiency">High Efficiency</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How many loads do you wash per week? </label>
+  <input type="text" class="form-control" id="washingmachineoften">
+</div>
+<h5>Dishwasher</h5>
+	<select required>
+	<option value6="">Select</option>
+  <option value6="Standard">Standard</option>
+  <option value6="Energy Saving">Energy Saving</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How often do you use your dishwasher per week?:</label>
+  <input type="text" class="form-control" id="dishwasheroften">
+</div>
+<h6>Toilets</h6>
+	<select required>
+	<option value7="">Select</option>
+  <option value7="Older">Older (manufactured before 1992)</option>
+  <option value7="Standard">Standard (manufactured after 1992)</option>
+</select>
+
+	<div class="form-group">
+  <label for="usr">How often do you flush the toilet per day?:</label>
+  <input type="text" class="form-control" id="toiletoften">
+</div>
+
+<button id="btn" onclick="totalGals()">Click me!</button>
+
+
+
+</body>
+</html>
