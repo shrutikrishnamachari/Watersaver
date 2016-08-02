@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="surveystyle.css">
+  <script src="surveyscript.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 <!-- This is the shower question. -->
 	<h2>Showers</h2>
 <!-- Select the type of shower. -->
-	<select required>
+	<select id = "showertype" required>
 	<option value="">Select</option>
   <option value="Standard">Standard</option>
   <option value="Energy Saving">Energy Saving</option>
@@ -38,7 +39,7 @@
 <!-- There are three types of faucets: The first is Bathroom. -->
 	<p>Bathroom Faucets</p>
 <!-- Select the type of bathroom faucet. -->
-	<select required>
+	<select id = "bathfaucettype" required>
 	<option value="">Select</option>
   <option value="Standard">Standard</option>
   <option value="Energy Saving">Energy Saving</option>
@@ -57,7 +58,7 @@
 <!-- The second type of faucet is the Kitchen Faucet. -->
  	<p>Kitchen Faucets</p>
  <!-- Select type -->
- 	<select required>
+ 	<select id = "kitchenfaucettype" required>
 	<option value="">Select</option>
   <option value="Standard">Standard</option>
   <option value="Energy Saving">Energy Saving</option>
@@ -75,7 +76,7 @@
  <!-- The last faucet category is "others" -->
  	<p>Other Faucets</p>
  <!-- Select type -->
- 	<select required>
+ 	<select id = "otherfaucettype" required>
 	<option value="">Select</option>
   <option value="Standard">Standard</option>
   <option value="Energy Saving">Energy Saving</option>
@@ -94,7 +95,7 @@
 <!-- The washing machine questions -->
  	<h4>Washing Machines</h4>
  <!-- select tye -->
-	<select required>
+	<select id = "machinetype" required>
 	<option value="">Select</option>
   <option value="Standard">Standard</option>
   <option value="High Efficiency">High Efficiency</option>
@@ -108,7 +109,7 @@
 <!-- The dishwasher questions -->
 <h5>Dishwasher</h5>
 <!-- Select type -->
-	<select required>
+	<select id = "dishtype" required>
 	<option value="">Select</option>
   <option value="Standard">Standard</option>
   <option value="Energy Saving">Energy Saving</option>
@@ -122,7 +123,7 @@
 <!-- The toilet questions -->
 <h6>Toilets</h6>
 <!-- Select type -->
-	<select required>
+	<select id = "toilettype" required>
 	<option value="">Select</option>
   <option value="Older">Older (manufactured before 1992)</option>
   <option value="Standard">Standard (manufactured after 1992)</option>
@@ -133,7 +134,7 @@
   <input type="text" class="form-control" id="toiletoften">
 </div>
 
-<button type="button" class="btn btn-default">Submit Survey</button>
+<button type="button" class="btn btn-default" onclick = "shower()">Submit Survey</button>
 
 
 
