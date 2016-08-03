@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="surveystyle.css">
-  <script src="surveyscript.js"></script>
-</head>
+  </head>
 <body>
 
   <h1>Water Usage Survey</h1> 
@@ -23,20 +22,22 @@
   <option value="Standard">Standard</option>
   <option value="Energy Saving">Energy Saving</option>
 </select>
-<!-- plug in the frequency of your showers. -->
-	<div class="form-group">
+
+
+
+<div class="form-group">
   <label for="usr">How often do you shower per day?:</label>
   <input type="text" class="form-control" id="showeroften">
-</div>
+</div> 
 <!-- Plug in the length of your showers. -->
 <div class="form-group">
   <label for="usr">How long are your showers (in minutes)?:</label>
   <input type="text" class="form-control" id="showertime">
-</div>
+</div> 
 
-<!-- These are the Faucet questions. -->
+<!-- These are the Faucet questions.
 	<h3>Faucets</h3>
-<!-- There are three types of faucets: The first is Bathroom. -->
+<!There are three types of faucets: The first is Bathroom. -->
 	<p>Bathroom Faucets</p>
 <!-- Select the type of bathroom faucet. -->
 	<select id = "bathfaucettype" required>
@@ -135,10 +136,6 @@
 </div>
 
 <button type="button" class="btn btn-default" onclick = "shower()">Submit Survey</button>
-
-
-
-
 
 
 </body>
