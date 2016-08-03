@@ -12,6 +12,8 @@
 
 
 <script>
+totalGal = toiletGals();
+
 
 function showerGals(){
   //calculates total number of gallons used by shower
@@ -146,7 +148,8 @@ function totalGals(){
   var totalGal = 0; //total water gallons starts at 0
   totalGal = showerGals() + faucetGals() + washingMachineGals() + dishWasherGals() + toiletGals(); //using helper funcions (which return the total gallons for that machine) to add all the water usage from different machines together
   alert("You use " + totalGal + " gallons of water per week!");
-  localStorage.setItem("totalGallons", totalGal); //stores total gallons to be used on next page
+  localStorage.setItem("totalGallons", totalGal); //stores total gallons to be used on next
+  return totalGal;
 }
 
 
