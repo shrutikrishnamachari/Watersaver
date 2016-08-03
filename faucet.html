@@ -2,8 +2,92 @@
 <html>
 <head>
 	<title></title>
+<style>
+h6 {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 1090px;
+	font-family: "Verdana";
+	font-size: 50px;
+}
+.image {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 1100px;	
+}
+.questions {
+	position: absolute;
+	top: 70px;
+	right: 0;
+	width: 900px;
+	font-family: "Verdana";
+	font-size: 10px;
+}
+
+</style>
 </head>
 <body>
+<h6>Faucet<h6>
+<div class = image>
+<img src="fauceticon.png">
+</div>
+<div class="questions">
+	<p>Bathroom Faucets</p>
+<!-- Select the type of bathroom faucet. -->
+	<select id = "bathfaucettype" required>
+	<option value="">Select</option>
+  <option value="Standard">Standard</option>
+  <option value="Energy Saving">Energy Saving</option>
+</select>
+<!-- Frequency of use -->
+	<div class="form-group">
+  <label for="usr">How often do you use this faucet per day?:</label>
+  <input type="text" class="form-control" id="bathfaucetoften">
+</div>
+<!-- Length of use.  -->
+<div class="form-group">
+  <label for="usr">How long is each use (in minutes)?:</label>
+  <input type="text" class="form-control" id="bathfaucettime">
+ </div>
 
+<!-- The second type of faucet is the Kitchen Faucet. -->
+ 	<p>Kitchen Faucets</p>
+ <!-- Select type -->
+ 	<select id = "kitchenfaucettype" required>
+	<option value="">Select</option>
+  <option value="Standard">Standard</option>
+  <option value="Energy Saving">Energy Saving</option>
+</select>
+<!-- Frequency -->
+	<div class="form-group">
+  <label for="usr">How often do you use this faucet per day?:</label>
+  <input type="text" class="form-control" id="kitchenfaucetoften">
+</div>
+<!-- Length -->
+<div class="form-group">
+  <label for="usr">How long is each use (in minutes)?:</label>
+  <input type="text" class="form-control" id="kitchenfaucettime">
+ </div>
+ <!-- The last faucet category is "others" -->
+ 	<p>Other Faucets</p>
+ <!-- Select type -->
+ 	<select id = "otherfaucettype" required>
+	<option value="">Select</option>
+  <option value="Standard">Standard</option>
+  <option value="Energy Saving">Energy Saving</option>
+</select>
+<!-- Frequency -->
+	<div class="form-group">
+  <label for="usr">How often do you use this faucet per day?:</label>
+  <input type="text" class="form-control" id="otherfaucetoften">
+</div>
+<!-- Length -->
+<div class="form-group">
+  <label for="usr">How long is each use (in minutes)?:</label>
+  <input type="text" class="form-control" id="otherfaucettime">
+ </div>
+</div>
 </body>
 </html>
