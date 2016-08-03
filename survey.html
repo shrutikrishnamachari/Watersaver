@@ -9,11 +9,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="surveystyle.css">
   </head>
-
+<script type="text/javascript" src="surveyscript.js"></script>
 
 
 <body>
-<script src="surveyscript.js">
+<script>
   
 
 
@@ -270,10 +270,10 @@ function toiletGals(){
   <input type="text" class="form-control" id="toiletoften">
 </div>
 
-<input type="submit" onclick="totalGals(showerGals(),faucetGals(),washingMachineGals(),dishWasherGals(),toiletGals())" value="Submit">
-
-<!-- <button type="button" class="btn btn-default" onclick = "totalGals()">Submit Survey</button>
+<!-- <input type="submit" onclick="totalGals(showerGals(),faucetGals(),washingMachineGals(),dishWasherGals(),toiletGals())" value="Submit">
  -->
+<button type="button" class="btn btn-default" onclick = "setVariables(showerGals(), faucetGals(), washingMachineGals(), dishWasherGals(),toiletGals())">Submit Survey</button>
+
 </form>
 
 
