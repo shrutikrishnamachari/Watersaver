@@ -2,8 +2,48 @@
 <html>
 <head>
 	<title></title>
+<style>
+h6 {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 1070px;
+	font-family: "Verdana";
+	font-size: 50px;
+}
+.image {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 1100px;	
+}
+.questions {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	width: 900px;
+	font-family: "Verdana";
+	font-size: 10px;
+}
+</style>
 </head>
 <body>
+<h6>Toilet<h6>
+<div class = image>
+<img src="toileticon.png">
+</div>
+<div class=questions>
+	<select id = "toilettype" required>
+	<option value="">Select</option>
+  <option value="Older">Older (manufactured before 1992)</option>
+  <option value="Standard">Standard (manufactured after 1992)</option>
+</select>
+<!-- Frequency -->
+	<div class="form-group">
+  <label for="usr">How often do you flush the toilet per day?:</label>
+  <input type="text" class="form-control" id="toiletoften">
+</div>
+</div>
 
 </body>
 </html>
