@@ -17,10 +17,11 @@ function waterPerYear(){
     return waterYear;
 }
 function percentOfWaterOnEarth(){ //percent of total freshwater you use 
-   var moreWater = waterDay / 13.2086;
+   var moreWater = waterPerDay() / 13.2086;
 
 
    alert("Everyday, you use "+ moreWater + " times as much water as you need to.")
+
 }
 
 
@@ -28,6 +29,6 @@ function percentOfWaterOnEarth(){ //percent of total freshwater you use
 
 
 <body>
-  <button id="btn" onclick="test()">Click me!</button>
+  <button id="btn" onclick="percentOfWaterOnEarth()">Click me!</button>
 </body>
 </html>
