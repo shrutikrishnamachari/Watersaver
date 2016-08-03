@@ -6,24 +6,28 @@
 </head>
 
 <script>
+var totalGal = 1000;
 
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+function waterPerDay(){
+    var waterDay = totalGal / 7;
+    return waterDay;
 }
-	totalGal = localStorage["totalGallons"];
-	function myFunction(){
-		alert(totalGal);
-	}
+function waterPerYear(){
+    var waterYear = totalGal * 52;
+    return waterYear;
+}
+function percentOfWaterOnEarth(){ //percent of total freshwater you use 
+   var moreWater = waterDay / 13.2086;
+
+
+   alert("Everyday, you use "+ moreWater + " times as much water as you need to.")
+}
+
+
 </script>
 
 
 <body>
-  <button id="btn" onclick="myFunction()">Click me!</button>
+  <button id="btn" onclick="test()">Click me!</button>
 </body>
 </html>

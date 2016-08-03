@@ -8,13 +8,25 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="surveystyle.css">
 </head>
-<body>
-<script src="surveyscript.js">
-	totalGals();
-	document.write("You use " + totalGal + " gallons of water per week!");
+<h2>You use</h2>
+<h1 id="change">nothing</h1>
+<h3>gallons of water per week!</h3>
+<script type="text/javascript" src="surveyscript.js"></script>
+
+<script>
+// var total;
+window.onload = setVariable();
+
+function setVariable(){
+	total = 0;
+	total = totalGals();
+	alert(total);
+}
+// var element = document.getElementById("change");
+// element.innerHTML = total;
+
+
 </script>
-
-
 
 </body>
 </html>
