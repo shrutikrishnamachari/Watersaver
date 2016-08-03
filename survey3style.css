@@ -1,0 +1,41 @@
+
+body{
+	margin-bottom: 20px;
+    background-image: url(water.jpg);
+    background-image: url("http://www.sunrisepremierpoolbuilders.com/wp-content/uploads/water.jpg");
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;  
+    background-position: right top;
+    width: 300px;
+    margin-left: 20px;
+}
+
+
+
+h2 {
+	font-size: 20px;
+	font-family: "Verdana";
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 20px;
+}
+h6 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 16px;
+}
