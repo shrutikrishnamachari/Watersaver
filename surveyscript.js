@@ -130,18 +130,18 @@ function toiletGals(){
 var total;
 var showerGal, faucetGal,washingMachineGal,dishWasherGal,toiletGal;
 
-function setVariables(showerGals,faucetGals,washingMachineGals,dishWasherGals,toiletGals){
-  showerGal = showerGals;
-  faucetGal = faucetGals;
-  washingMachineGal = washingMachineGals;
-  dishWasherGal = dishWasherGals;
-  toiletGal = toiletGals;
-  alert(totalGals());
-}
+// function setVariables(showerGals,faucetGals,washingMachineGals,dishWasherGals,toiletGals){
+//   showerGal = showerGals;
+//   faucetGal = faucetGals;
+//   washingMachineGal = washingMachineGals;
+//   dishWasherGal = dishWasherGals;
+//   toiletGal = toiletGals;
+//   alert(totalGals());
+// }
 
-function totalGals(){
+function totalGals(showerGals,faucetGals,washingMachineGals,dishWasherGals,toiletGals){
   var totalGal = 0; //total water gallons starts at 0
-  totalGal = showerGal + faucetGal + washingMachineGal + dishWasherGal + toiletGal; //using helper funcions (which return the total gallons for that machine) to add all the water usage from different machines together
+  totalGal = showerGals + faucetGals + washingMachineGals + dishWasherGals + toiletGals; //using helper funcions (which return the total gallons for that machine) to add all the water usage from different machines together
   localStorage.setItem("totalGallons", totalGal); //stores total gallons to be used on next
   total=totalGal;
   return totalGal;

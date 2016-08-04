@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="surveystyle.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="surveystyle.css"> -->
 	<link type="text/css" href="survey.html">
 </head>
-<h2>You use</h2>
+<!-- <h2>You use</h2>
 <h1 id="change">nothing</h1>
 <h3>gallons of water per week!</h3>
 <script type="text/javascript" src="surveyscript.js"></script>
@@ -23,7 +23,112 @@ window.onload = alert();
 // element.innerHTML = total;
 
 
+</script> -->
+<style type="text/css">
+	div.fadeMe {
+  opacity:    0.6; 
+  background: #000; 
+  width:      100%;
+  height:     100%; 
+  z-index:    10;
+  top:        0; 
+  left:       0; 
+  position:   fixed; 
+}
+.text{
+	text-align: center;
+	opacity: 0.9;
+	z-index: 100;
+	color:white;
+	position: fixed;
+	left:330px;
+	top:130px;
+}
+h1{
+	font-size: 80px;
+}h2{
+	font-size: 50px;
+
+}h3{
+	font-size: 50px;
+	}
+
+button {
+/*makes changes to button*/
+ background-color: rgb(50,50,50);
+ color: white;
+ padding: 22px 16px;
+ text-align: center;
+ font-family: "Verdana";
+ font-size: 14px;
+ border-radius: 12px;
+ -webkit-transition-duration: 0.4s;
+ transition-duration: 0.4s;
+ position: absolute;
+ z-index: 70;
+
+}
+button:hover{
+/*controls button hover*/
+	background-color: white;
+	color:#555555;
+
+}
+.button1 {
+	position: absolute;
+	top: 500px;
+	right: 540px;
+	width: 200px;
+}.button2{
+	top:400px;
+	position: absolute;
+	right:625px;
+	width:200px;
+
+}.button3{
+	top:400px;
+	position: absolute;
+	right:435px;
+	width:200px;
+
+
+}
+
+
+</style>
+<script language="JavaScript">
+  function processForm()
+  {
+    var parameters = location.search.substring(1).split("&");
+    var temp = parameters[0].split("=");
+
+    l = unescape(temp[1]);
+
+    //alert(l); //Dialog with the text you put on the textbox
+
+  }
+  processForm();
+
 </script>
+<body background="waterfall-01.jpg">
+ <div class="fadeMe"></div>
+ <div class="text">
+<center><h2>You use</h2>
+<h1 id="header">Old Header</h1>
+<h3>gallons of water per week!</h3></center></div>
+<script>
+var element = document.getElementById("header");
+element.innerHTML = l;
+</script>
+
+<div class="button1">
+<button onclick="window.location.href='file:///Users/gwc/Desktop/Watersaver/waterprofile.html'">Track your daily water usage!</button>
+</div>
+<div class="button2">
+<button onclick="window.location.href='file:///Users/gwc/Desktop/Watersaver/facts.html'">Facts about water!</button></div>
+<div class="button3">
+<button onclick="window.location.href='file:///Users/gwc/Desktop/Watersaver/tips.html'">How you can save!</button></div>
+
 
 </body>
 </html>
