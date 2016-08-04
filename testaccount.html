@@ -38,7 +38,18 @@
                 height: 100%; /* Full height */
                 background-color: rgb(0,0,0); /* Fallback color */
                 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            }            
+            }  
+            .modal3 {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */          
 
 /* Modal Content */
             .modal-content {
@@ -68,6 +79,19 @@
                 animation-duration: 0.4s
             }
             .modal2-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                -webkit-animation-name: animatetop;
+                -webkit-animation-duration: 0.4s;
+                animation-name: animatetop;
+                animation-duration: 0.4s
+            }
+            .modal3-content {
                 position: relative;
                 background-color: #fefefe;
                 margin: auto;
@@ -130,7 +154,19 @@
                 color: #000;
                 text-decoration: none;
                 cursor: pointer;
-            }            
+            } 
+            .close3 {
+                color: black;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close3:hover,
+            .close3:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;           
             .modal-header {
                 padding: 2px 16px;
                 background-color: white;
@@ -154,6 +190,16 @@
             }
 
             .modal2-body {padding: 2px 16px;}
+            
+            .modal3-header {
+                padding: 2px 16px;
+                background-color: white;
+                color: black;
+            }
+
+            .modal3-body {padding: 2px 16px;}
+
+
             .raindrop {
                 position: absolute;
                 top: 180px;
@@ -176,6 +222,7 @@
         <img id="myBtn" src="showerheadpng.png" alt="showerhead" height="100" width="100">
         <img id="myBtn1" src="fauceticon.png" alt="faucet" height="100" width="100">
         <img id="myBtn2" src="washingmachineicon.png" alt="faucet" height="100" width="100">
+        <img id="myBtn3" src="dishwashericon.png" alt="dishwasher" height="100" width="100">
 
 <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -283,7 +330,33 @@
                 </div>
             </div>
         </div>
+   
+<!-- The Modal -->
+        <div id="myModal3" class="modal3">
+            <div class="modal3-header">
+                    <span class="close3">Submit</span>
+                    <h3>Dishwasher</h3>
+                </div>
+                    <select id = "dishtype" required>
+                        <option value="">Select</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Energy Saving">Energy Saving</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
     <script>
+
+
+
+
 // Get the modal
         var modal = document.getElementById('myModal');
 
@@ -437,7 +510,48 @@
             if (event.target == modal2) {
             modal2.style.display = "none";
             }
- }   
+
+ }  
+
+ // Get the modal
+        var modal3 = document.getElementById('myModal3');
+
+// Get the button that opens the modal
+        var btn3 = document.getElementById("myBtn3"); 
+// Get the <span> element that closes the modal
+        var span3 = document.getElementsByClassName("close3")[0];
+
+// When the user clicks the button, open the modal
+        btn2.onclick = function() {
+            modal3.style.display = "block";
+        }
+// When the user clicks on <span> (submit), close the modal
+        span3.onclick = function() {
+            modal3.style.display = "none";
+            var dishwasher; //type of machine
+                if (document.getElementById("dishtype").value == "Standard"){
+                    dishWasherType = false;
+                }else{
+                    dishWasherType = true;
+                }
+                if (dishWasherType == true){ 
+                    dishWasherGal = dishWasherTimes * 5.5; //gallons for energy saving machine
+                }else{
+                    dishWasherGal = dishWasherTimes * 12.5; //gallons for standard
+                }
+  
+        }
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal3) {
+            modal3.style.display = "none";
+            }
+
+ }  
+
+
+
+
 
 
     </script>
