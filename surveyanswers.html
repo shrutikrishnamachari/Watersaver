@@ -42,7 +42,7 @@ window.onload = alert();
 	color:white;
 	position: fixed;
 	left:330px;
-	top:130px;
+	top:60px;
 }
 h1{
 	font-size: 80px;
@@ -93,33 +93,119 @@ button:hover{
 
 
 }
+#loader {
+  position: absolute;
+/*  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+/*  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;*/*/
+}
 
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
 </style>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+
 <script language="JavaScript">
-  function processForm()
+  function processForm() //gets totalGals() calculation from survey page
   {
     var parameters = location.search.substring(1).split("&");
     var temp = parameters[0].split("=");
 
-    l = unescape(temp[1]);
+    l = unescape(temp[1]); //the variable holding the value for total gallons
 
-    //alert(l); //Dialog with the text you put on the textbox
 
   }
   processForm();
 
+  function waterPerDay(){ //calculates water per day
+    var waterDay = l / 7;
+    return waterDay;
+}
+function waterPerYear(){ //calculates water per year
+    var waterYear =l * 52;
+    return waterYear;
+}
+var waterday = waterPerDay();
+var wateryear = waterPerYear();
+
 </script>
-<body background="waterfall-01.jpg">
+<div id="loader"><img src="drop-loader3.gif"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<body background="waterfall-01.jpg"  onload="myFunction()" style="margin:0;">
+
+
  <div class="fadeMe"></div>
  <div class="text">
 <center><h2>You use</h2>
 <h1 id="header">Old Header</h1>
-<h3>gallons of water per week!</h3></center></div>
+<h3>gallons of water per week!</h3></center>
+<h4 id="header2">blank</h4>
+<h5 id="header3">blank</h5>
+</div>
 <script>
 var element = document.getElementById("header");
-element.innerHTML = l;
+element.innerHTML = l; //displays gallons
+var element2 = document.getElementById("header2");
+element2.innerHTML =(waterday + " gallons per day,");
+var element3 = document.getElementById("header3");
+element3.innerHTML = ("and " + wateryear+ " gallons per year.");
 </script>
+
 
 <div class="button1">
 <button onclick="window.location.href='file:///Users/gwc/Desktop/Watersaver/waterprofile.html'">Track your daily water usage!</button>
@@ -128,7 +214,7 @@ element.innerHTML = l;
 <button onclick="window.location.href='file:///Users/gwc/Desktop/Watersaver/facts.html'">Facts about water!</button></div>
 <div class="button3">
 <button onclick="window.location.href='file:///Users/gwc/Desktop/Watersaver/tips.html'">How you can save!</button></div>
-
+</div>
 
 </body>
 </html>
