@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="survey3style.css">
 	<title>Survey</title>
 </head>
 
 <body>
 
-You use <?php echo $_GET["often"*"time"*2]; ?><br>
-Gallons of water; ?>
+	<p> 
+	You use <?php echo $_POST["often"]; ?>
+	Gallons of water
+	</p>
 
 </body>
 </html>

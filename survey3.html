@@ -1,13 +1,17 @@
 	<link rel="stylesheet" type="text/css" href="survey3style.css">
 <html>
 <body>
-<form action="surveyaction.html" method="post">
+
+<form action="surveyaction.html" method="post" autocomplete="off">
     <legend>Shower:</legend>
+    What type of showerhead do you have? <br>
+	<input type="radio" name="type" value="Standard">Standard
+	<input type="radio" name="type" value="EnergySaving">Energy Saving <br>
     How often do you shower per week? <br>
     <input type="text" name="often"><br>
     How long are your showers (in minutes)? <br>
     <input type="text" name="time"><br><br>
-    <input type="submit">
+    <input type="submit" value="Submit">
 </form>
 
 </body>
