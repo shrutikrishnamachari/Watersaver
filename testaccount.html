@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+/* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            .modal1 {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            .modal2 {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }            
+
+/* Modal Content */
+            .modal-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                -webkit-animation-name: animatetop;
+                -webkit-animation-duration: 0.4s;
+                animation-name: animatetop;
+                animation-duration: 0.4s
+            }
+            .modal1-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                -webkit-animation-name: animatetop;
+                -webkit-animation-duration: 0.4s;
+                animation-name: animatetop;
+                animation-duration: 0.4s
+            }
+            .modal2-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                -webkit-animation-name: animatetop;
+                -webkit-animation-duration: 0.4s;
+                animation-name: animatetop;
+                animation-duration: 0.4s
+            }
+/* Add Animation */
+            @-webkit-keyframes animatetop {
+                from {top:-300px; opacity:0}
+                to {top:0; opacity:1}
+            }
+
+            @keyframes animatetop {
+                from {top:-300px; opacity:0}
+                to {top:0; opacity:1}
+            }
+
+/* The Close Button */
+            .close {
+                color: black;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .close1 {
+                color: black;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close1:hover,
+            .close1:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }            
+            .close2 {
+                color: black;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close2:hover,
+            .close2:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }            
+            .modal-header {
+                padding: 2px 16px;
+                background-color: white;
+                color: black;
+            }
+
+            .modal-body {padding: 2px 16px;}
+
+            .modal1-header {
+                padding: 2px 16px;
+                background-color: white;
+                color: black;
+            }
+
+            .modal1-body {padding: 2px 16px;}
+
+            .modal2-header {
+                padding: 2px 16px;
+                background-color: white;
+                color: black;
+            }
+
+            .modal2-body {padding: 2px 16px;}
+            .raindrop {
+                position: absolute;
+                top: 180px;
+                right: 0;
+                width: 680px;
+
+            }
+        </style>
+    </head>
+    <body>
+
+<!-- Trigger/Open The Modal -->
+<!-- <button id="myBtn">Open Modal</button> -->
+        
+        <div class="raindrop">
+            <h3 id="demo">FULL</h3>
+            <img src="face1.png">
+        </div>
+
+        <img id="myBtn" src="showerheadpng.png" alt="showerhead" height="100" width="100">
+        <img id="myBtn1" src="fauceticon.png" alt="faucet" height="100" width="100">
+        <img id="myBtn2" src="washingmachineicon.png" alt="faucet" height="100" width="100">
+
+<!-- The Modal -->
+        <div id="myModal" class="modal">
+
+<!-- Modal content -->
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span class="close">Submit</span>
+                    <h2>Shower</h2>
+                </div>
+        
+                <div class="modal-body">
+                    <div class=questions>
+                        <select id = "showertype" required>
+                            <option value="">Select</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Energy Saving">Energy Saving</option>
+                        </select>
+
+<!-- Plug in the length of your showers. -->
+                        <div class="form-group">
+                            <label for="usr">How long was your showers (in minutes)?:</label>
+                            <input type="text" class="form-control" id="showertime">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal1" class="modal1">
+
+<!-- Modal content -->
+            <div class="modal1-content">
+
+                <div class="modal1-header">
+                      <span class="close1">Submit</span>
+                      <h2>Faucets</h2>
+                </div>
+                <div class="modal1-body">
+                    <p>Bathroom Faucets</p>
+<!-- Select the type of bathroom faucet. -->
+                        <select id = "bathfaucettype" required>
+                            <option value="">Select</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Energy Saving">Energy Saving</option>
+                        </select>
+
+<!-- Length of use.  -->
+                        <div class="form-group">
+                            <label for="usr">How long was your use (in minutes)?:</label>
+                            <input type="text" class="form-control" id="bathfaucettime">
+                        </div>
+
+<!-- The second type of faucet is the Kitchen Faucet. -->
+                    <p>Kitchen Faucets</p>
+<!-- Select type -->
+                        <select id = "kitchenfaucettype" required>
+                            <option value="">Select</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Energy Saving">Energy Saving</option>
+                        </select>
+
+<!-- Length -->
+                        <div class="form-group">
+                            <label for="usr">How long was your use (in minutes)?:</label>
+                            <input type="text" class="form-control" id="kitchenfaucettime">
+                        </div>
+<!-- The last faucet category is "others" -->
+                    <p>Other Faucets</p>
+<!-- Select type -->
+                        <select id = "otherfaucettype" required>
+                            <option value="">Select</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Energy Saving">Energy Saving</option>
+                        </select>
+<!-- Length -->
+                        <div class="form-group">
+                            <label for="usr">How long was your use (in minutes)?:</label>
+                            <input type="text" class="form-control" id="otherfaucettime">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- The Modal -->
+        <div id="myModal2" class="modal2">
+
+<!-- Modal content -->
+            <div class="modal2-content">
+
+                <div class="modal2-header">
+                    <span class="close2">Submit</span>
+                    <h2>Washing Machine</h2>
+                </div>
+        
+                <div class="modal2-body">
+                    <div class=questions>
+                        <select id = "machinetype" required>
+                            <option value="">Select</option>
+                            <option value="Standard">Standard</option>
+                            <option value="High Efficiency">High Efficiency</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+// Get the modal
+        var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+// When the user clicks on <span> (submit), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+//calculates total number of gallons used by shower
+            var showerMins= Number(document.getElementById("showertime").value); 
+//number of minutes per shower
+
+            if (document.getElementById("showertype").value == "Standard"){ 
+// if shower is standard, the type is false and vice versa
+                showerType = false;
+            }else{
+                showerType = true;
+            }
+            if (showerType == true){
+                showerGal = (showerMins * 2); 
+            }else{
+                showerGal = (showerMins * 5); 
+            }
+            var element = document.getElementById("demo");
+            element.innerHTML = showerGal + " gallons";
+            return showerGal;
+        }
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }   
+// Get the modal
+        var modal1 = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+        var btn1 = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+        var span1 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal
+        btn1.onclick = function() {
+            modal1.style.display = "block";
+        }
+
+// When the user clicks on <span> (submit), close the modal
+        span1.onclick = function() {
+            modal1.style.display = "none";
+//calculates the total gallons used by all faucets
+            var bFaucetType, kFaucetType, oFaucetType; 
+            var faucetGal = 0; //total gallons used by faucet starts at 0
+  
+            var bFaucetMins= Number(document.getElementById("bathfaucettime").value); //bathroom faucet mins per use
+
+            var kFaucetMins= Number(document.getElementById("kitchenfaucettime").value); //kitchen faucet mins per use
+
+            var oFaucetMins= Number(document.getElementById("otherfaucettime").value); //other faucet mins per use
+
+            if (document.getElementById("bathfaucettype").value == "Standard"){
+                bFaucetType = false;
+            }else{
+                bFaucetType = true;
+            }
+            if (document.getElementById("kitchenfaucettype").value == "Standard"){
+                kFaucetType = false;
+            }else{
+                kFaucetType = true;
+            }
+            if (document.getElementById("otherfaucettype").value == "Standard"){
+                oFaucetType = false;
+            }else{
+                oFaucetType = true;
+            }
+
+            if (bFaucetType == true){
+//calculates total gallons by adding each type of faucet's usage together to faucetGal
+                faucetGal += 7 * (bFaucetMins * 0.5);
+            }else{
+                faucetGal += 7 * (bFaucetMins * 2.5);
+            }
+            if (kFaucetType == true){
+                faucetGal += 7 * (kFaucetMins * 0.5);
+            }else{
+                faucetGal += 7 * (kFaucetMins * 2.5);
+            }
+            if (bFaucetType == true){
+                faucetGal += 7 * (oFaucetMins * 0.5);
+            }else{
+                faucetGal += 7 * (oFaucetMins * 2.5);
+            }
+
+            var element = document.getElementById("demo");
+            element.innerHTML = faucetGal + " gallons";
+            return showerGal;
+}
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+}
+// Get the modal
+        var modal2 = document.getElementById('myModal2');
+
+// Get the button that opens the modal
+        var btn2 = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+        var span2 = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal
+        btn2.onclick = function() {
+            modal2.style.display = "block";
+        }
+
+// When the user clicks on <span> (submit), close the modal
+        span2.onclick = function() {
+            modal2.style.display = "none";
+            var washingMachineType; //type of machine
+
+                if (document.getElementById("machinetype").value == "Standard"){
+                    washingMachineType = false;
+                }else{
+                    washingMachineType = true;
+                }
+            
+                if (washingMachineType == true){
+                    washingMachineGal = 22.5; //gallons for energy saving machine
+                }else{
+                    washingMachineGal = 37; //gallons for standard
+                }
+            var element = document.getElementById("demo");
+            element.innerHTML = washingMachineGal;
+
+        }
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal2) {
+            modal2.style.display = "none";
+            }
+ }   
+
+
+    </script>
+    </body>
+</html>
+
+
+
