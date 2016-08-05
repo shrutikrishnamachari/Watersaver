@@ -332,19 +332,27 @@
    
 <!-- The Modal -->
         <div id="myModal3" class="modal3">
-            <div class="modal3-header">
+
+<!-- Modal content -->
+            <div class="modal3-content">
+                <div class="modal3-header">
                     <span class="close3">Submit</span>
                     <h3>Dishwasher</h3>
                 </div>
-                    <select id = "dishtype" required>
-                        <option value="">Select</option>
-                        <option value="Standard">Standard</option>
-                        <option value="Energy Saving">Energy Saving</option>
-                    </select>
+
+                <div class="modal-body">
+                    <div class=questions>
+                        <select id = "machinetype" required>
+                            <option value="">Select</option>
+                            <option value="Standard">Standard</option>
+                            <option value="High Efficiency">High Efficiency</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
+
+
 
 
 
@@ -521,7 +529,7 @@
         var span3 = document.getElementsByClassName("close3")[0];
 
 // When the user clicks the button, open the modal
-        btn2.onclick = function() {
+        btn3.onclick = function() {
             modal3.style.display = "block";
         }
 // When the user clicks on <span> (submit), close the modal
