@@ -13,10 +13,45 @@
   top:        0; 
   left:       0; 
   position:   fixed; 
+}.container{
+	text-align:center;
+}
+
+.container div{
+
+	/* Setting the box-sizing method: */
+	box-sizing:border-box;
+
+	/* Firefox still requires the -moz prefix */
+	-moz-box-sizing:border-box;
+
+	width:120px;
+	height:120px;
+	display:inline-block;
+	vertical-align:top;
+}
+#el1{
+	color:#524480;
+	background-color:#B2A4E0;
+}
+
+#el2{
+	padding:8px;
+	border:10px solid #9ec551;
+	background-color:#fff;
+}
+
+#el3{
+	padding:32px;
+	background-color:#ccc;
 }
 </style>
 <body background="lake.jpg">
 <div class="fadeMe"></div>
-
+<div class="container">
+	<div id="el1">Element 1</div>
+	<div id="el2">Element 2</div>
+	<div id="el3">Element 3</div>
+</div>
 </body>
 </html>
