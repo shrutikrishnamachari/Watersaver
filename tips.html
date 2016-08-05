@@ -13,10 +13,48 @@
   top:        0; 
   left:       0; 
   position:   fixed; 
+}.container{
+	text-align:center;
+}
+
+.container div{
+
+	/* Setting the box-sizing method: */
+	box-sizing:border-box;
+	position: relative;
+	z-index: 100;
+	/* Firefox still requires the -moz prefix */
+	-moz-box-sizing:border-box;
+	top: 300px;
+	width:350px;
+	height:400px;
+	margin: 15px;
+	display:inline-block;
+	vertical-align:top;
+	background-color: rgb(255, 252, 247);
+}
+#box1{
+	padding:8px;
+	color:#524480;
+
+}
+#box2{
+	padding:8px;
+	
+
+}
+
+#box3{
+	padding:8px;
+
 }
 </style>
-<body background="ocean.jpg">
+<body background="lake.jpg">
 <div class="fadeMe"></div>
-
+<div class="container">
+	<div id="box1">Element 1</div>
+	<div id="box2">Element 2</div>
+	<div id="box3">Element 3</div>
+</div>
 </body>
 </html>
