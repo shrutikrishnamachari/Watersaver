@@ -2,18 +2,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="604455573536-b4ehsn2bffjr1tvf74bhon64b1734g6l.apps.googleusercontent.com">
   <title></title>
 </head>
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="fb-share-button" data-href="https://d-r-o-p.herokuapp.com/index.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd-r-o-p.herokuapp.com%2Findex.html&amp;src=sdkpreparse">Share</a></div>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+</script>
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
 </body>
 </html>
