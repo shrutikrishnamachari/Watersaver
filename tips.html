@@ -18,24 +18,27 @@
 }
 
 .container div{
-
+	opacity: .8;
 	/* Setting the box-sizing method: */
 	box-sizing:border-box;
 	position: relative;
 	z-index: 100;
 	/* Firefox still requires the -moz prefix */
 	-moz-box-sizing:border-box;
-	top: 300px;
-	width:350px;
-	height:400px;
+	top: 50px;
+	width:300px;
+	height:300px;
 	margin: 15px;
 	display:inline-block;
 	vertical-align:top;
 	background-color: rgb(255, 252, 247);
+	text-align: center;
+		color:#524480;
+		border-radius: 8px;
 }
 #box1{
 	padding:8px;
-	color:#524480;
+
 
 }
 #box2{
@@ -47,19 +50,38 @@
 #box3{
 	padding:8px;
 
+}p{
+	margin-top: 20px;
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}h1{
+	font-family: "Verdana";
+	font-size: 150px;
+	color: white;
+	position:relative;
+	z-index: 200;
+	opacity: .7;
+}body{
+	background-repeat: no-repeat;
 }
 </style>
 <body background="lake.jpg">
+
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
 <div class="fadeMe"></div>
+<center><h1>TIPS</h1></center>
 <div class="container">
-	<div id="box1">Take shorter showers! Shortening your showers by just a few minutes can save thousands of dollars a year!</div>
-	<div id="box2">Switch to high-effinciency appliances! It can save you 7,000 gallons a year!</div>
-	<div id="box3">When washing dishes or brushing your teeth, don't leave your water running!</div>
-		<div id="box4">Only use the dish washer or washing machine when they are full. This can save you over 10,000 gallons a year!</div>
+	<div id="box1"><img src="shower.png" width="120"><p>Take shorter showers! Shortening your showers by just a few minutes can save thousands of dollars a year!</p></div>
+	<div id="box2"><img src="save.png" width="120"><p>Switch to high-effinciency appliances! It can save you 7,000 gallons a year!</p></div>
+	<div id="box3"><img src="wash.png" width="120"><p>When washing dishes or brushing your teeth, don't leave your water running!</p></div>
+		<div id="box4"><img src="machine.png" width="120"><p>Only use the dish washer or washing machine when they are full. This can save you over 10,000 gallons a year!</p></div>
 
-	<div id="box5">Frequently check for leaks, and when you find them, fix them! Leaks </div>
+	<div id="box5"><img src="leak.png" width="120"><p>Frequently check for leaks, and when you find them, fix them! Leaks can attribute to the loss of anywhere from 2,000 to 20,0000 gallons of water a year!</p></div>
 
-	<div id="box6">When washing dishes or brushing your teeth, don't leave your water running!</div>
+	<div id="box6"><img src="broom.png" width="120"><p>Use a broom to clean instead of a hose, and make sure your hose is turned off completely! This can save over 10,000 gallons</p></div>
 
 </div>
 </body>
