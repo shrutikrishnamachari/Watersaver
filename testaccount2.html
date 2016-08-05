@@ -67,7 +67,6 @@
             .modal-content {
                 position: relative;
                 background-color: #fefefe;
-                font-style: "Verdana";
                 margin: auto;
                 padding: 0;
                 border: 1px solid #888;
@@ -79,7 +78,6 @@
                 animation-duration: 0.4s
             }
             .modal1-content {
-                font-family: "Verdana";
                 position: relative;
                 background-color: #fefefe;
                 margin: auto;
@@ -93,7 +91,6 @@
                 animation-duration: 0.4s
             }
             .modal2-content {
-                font-family: "Verdana";
                 position: relative;
                 background-color: #fefefe;
                 margin: auto;
@@ -107,7 +104,6 @@
                 animation-duration: 0.4s
             }
             .modal3-content {
-                font-family: "Verdana";
                 position: relative;
                 background-color: #fefefe;
                 margin: auto;
@@ -122,7 +118,6 @@
             }
 
             .modal4-content {
-                font-family: "Verdana";
                 position: relative;
                 background-color: #fefefe;
                 margin: auto;
@@ -148,7 +143,6 @@
 
 /* The Close Button */
             .close {
-                font-family: "Verdana";
                 color: black;
                 float: right;
                 font-size: 28px;
@@ -157,13 +151,11 @@
 
             .close:hover,
             .close:focus {
-                font-family: "Verdana";
                 color: #000;
                 text-decoration: none;
                 cursor: pointer;
             }
             .close1 {
-                font-family: "Verdana";
                 color: black;
                 float: right;
                 font-size: 28px;
@@ -172,13 +164,11 @@
 
             .close1:hover,
             .close1:focus {
-                font-family: "Verdana";
                 color: #000;
                 text-decoration: none;
                 cursor: pointer;
             }            
             .close2 {
-                font-family: "Verdana";
                 color: black;
                 float: right;
                 font-size: 28px;
@@ -187,13 +177,11 @@
 
             .close2:hover,
             .close2:focus {
-                font-family: "Verdana";
                 color: #000;
                 text-decoration: none;
                 cursor: pointer;
             } 
             .close3 {
-                font-family: "Verdana";
                 color: black;
                 float: right;
                 font-size: 28px;
@@ -202,14 +190,12 @@
 
             .close3:hover,
             .close3:focus {
-                font-family: "Verdana";
                 color: #000;
                 text-decoration: none;
                 cursor: pointer;           
             }
 
             .close4 {
-                font-family: "Verdana";
                 color: black;
                 float: right;
                 font-size: 28px;
@@ -218,7 +204,6 @@
 
             .close4:hover,
             .close4:focus {
-                font-family: "Verdana";
                 color: #000;
                 text-decoration: none;
                 cursor: pointer;
@@ -227,60 +212,45 @@
 
 
             .modal-header {
-                font-family: "Verdana";
                 padding: 2px 16px;
                 background-color: white;
                 color: black;
             }
 
 
-            .modal-body {
-                font-family: "Verdana";
-                padding: 2px 16px;}
+            .modal-body {padding: 2px 16px;}
 
             .modal1-header {
-                font-family: "Verdana";
                 padding: 2px 16px;
                 background-color: white;
                 color: black;
             }
 
-            .modal1-body {
-                font-family: "Verdana";
-                padding: 2px 16px;}
+            .modal1-body {padding: 2px 16px;}
 
             .modal2-header {
-                font-family: "Verdana";
                 padding: 2px 16px;
                 background-color: white;
                 color: black;
             }
 
-            .modal2-body {
-                font-family: "Verdana";
-                padding: 2px 16px;}
+            .modal2-body {padding: 2px 16px;}
             
             .modal3-header {
-                font-family: "Verdana";
                 padding: 2px 16px;
                 background-color: white;
                 color: black;
             }
 
-            .modal3-body {
-                font-family: "Verdana";
-                padding: 2px 16px;}
+            .modal3-body {padding: 2px 16px;}
 
             .modal4-header {
-                font-family: "Verdana";
                 padding: 2px 16px;
                 background-color: white;
                 color: black;
             }
 
-            .modal4-body {
-                font-family: "Verdana";
-                padding: 2px 16px;}
+            .modal4-body {padding: 2px 16px;}
 
 
 
@@ -299,8 +269,8 @@
 <!-- <button id="myBtn">Open Modal</button> -->
         
         <div class="raindrop">
-            <h3 id="demo">0</h3>
-            <img id="drop" src="face1.png">
+            <h3 id="demo">FULL</h3>
+            <img src="face1.png">
         </div>
 
         <img id="myBtn" src="showerheadpng.png" alt="showerhead" height="100" width="100">
@@ -427,7 +397,7 @@
 
                 <div class="modal-body">
                     <div class=questions>
-                        <select id = "dishtype" required>
+                        <select id = "machinetype" required>
                             <option value="">Select</option>
                             <option value="Standard">Standard</option>
                             <option value="High Efficiency">High Efficiency</option>
@@ -449,7 +419,7 @@
 
                 <div class="modal-body">
                     <div class=questions>
-                        <select id = "toilettype" required>
+                        <select id = "machinetype" required>
                             <option value="">Select</option>
                             <option value="Standard">Standard</option>
                             <option value="High Efficiency">High Efficiency</option>
@@ -461,24 +431,6 @@
 
 
     <script>
-    var count = 0
-
-    function face_changer() {
-        var drop = document.getElementById('drop');
-        if (count <= 40) {
-            drop.src = "face1.png";
-
-        }else if(count<= 80){
-            drop.src = "face2.png"
-        }
-        else if(count<= 120){
-            drop.src = "face3.png"
-        }
-        else if(count<= 160){
-            drop.src = "face4.png"
-        }
-        else {drop.src = "face5.png"}
-    }
 
 
 
@@ -516,10 +468,8 @@
                 showerGal = (showerMins * 5); 
             }
             var element = document.getElementById("demo");
-            count += showerGal;
-            element.innerHTML = count;
-            face_changer()
-   
+            element.innerHTML = showerGal + " gallons";
+            return showerGal;
         }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -589,11 +539,8 @@
             }
 
             var element = document.getElementById("demo");
-            count += faucetGal;
-            element.innerHTML = count;
-            face_changer()
+            element.innerHTML = faucetGal + " gallons";
             return faucetGal;
-
 }
 // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -632,10 +579,7 @@
                     washingMachineGal = 37; //gallons for standard
                 }
             var element = document.getElementById("demo");
-            count += washingMachineGal;
-            element.innerHTML = count;
-            face_changer()
-            return washingMachineGal;
+            element.innerHTML = washingMachineGal;
 
         }
 
@@ -644,6 +588,7 @@
             if (event.target == modal2) {
             modal2.style.display = "none";
             }
+
  }  
 
  // Get the modal
@@ -665,19 +610,13 @@
                 if (document.getElementById("dishtype").value == "Standard"){
                     dishWasherType = false;
                 }else{
-                     dishWasherType = true;
-                 }
-                 if (dishWasherType == true){ 
-                    dishWasherGal = .5; //gallons for energy saving machine
-                 }else{
-                     dishWasherGal = 12.5; //gallons for standard
-                 }
-
-            var element = document.getElementById("demo");
-            count += dishWasherGal;
-            element.innerHTML = count;
-            face_changer()
-            // return dishWasherGal;
+                    dishWasherType = true;
+                }
+                if (dishWasherType == true){ 
+                    dishWasherGal = dishWasherTimes * 5.5; //gallons for energy saving machine
+                }else{
+                    dishWasherGal = dishWasherTimes * 12.5; //gallons for standard
+                }
   
         }
 // Get the modal
@@ -701,15 +640,10 @@
                     toiletType = true;
                 }
                 if (toiletType == true){
-                    toiletGal = 1.6; //gallons for newer toilet
+                    toiletGal = 7* (toiletTimes * 1.6); //gallons for newer toilet
                 }else{
-                    toiletGal = 5; //gallons for older toilet
+                    toiletGal = 7 * (toiletTimes * 5); //gallons for older toilet
                 }
-            var element = document.getElementById("demo");
-            count += toiletGal;
-            element.innerHTML = count;
-            face_changer()
-            return toiletGal;
         }
 
 
