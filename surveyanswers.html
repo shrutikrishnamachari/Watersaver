@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-	<title>Water Usage</title>
+	<title>DROP | Water Usage</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -24,7 +24,7 @@ window.onload = alert();
 
 
 </script> -->
-<style type="text/css">
+<style type="text/css"> /*black overlay over background*/
 	div.fadeMe {
   opacity:    0.6; 
   background: #000; 
@@ -106,9 +106,8 @@ button:hover{
 }
 
 
-
 /* Add animation to "page content" */
-.animate-bottom {
+.animate-bottom { /*animation for the letters and buttons coming in after loading screen*/
   position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
@@ -142,12 +141,12 @@ button:hover{
 <script>
 var myVar;
 
-function myFunction() {
+ function myFunction() {  //functions for showing words and animation after loading screen
     myVar = setTimeout(showPage, 3000);
 }
 
 function showPage() {
-  document.getElementById("loader").style.display = "none";
+  document.getElementById("loader").style.display = "none"; //hides loader
   document.getElementById("overlay").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
@@ -179,14 +178,14 @@ var waterday = waterPerDay();
 var wateryear = waterPerYear();
 
 </script>
-<div id="loader"><img src="drop-loader3.gif"></div>
-<div id="overlay"><img src="overlay.png" width="1265" height="708"></div>
-<div style="display:none;" id="myDiv" class="animate-bottom">
+<div id="loader"><img src="drop-loader3.gif"></div> <!-- drop loader -->
+<div id="overlay"><img src="overlay.png" width="1265" height="708"></div> <!-- grey behind drop loader -->
+<div style="display:none;" id="myDiv" class="animate-bottom"> <!-- hides info while loader is running -->
 
 <body background="waterfall-01.jpg"  onload="myFunction()" style="margin:0;">
 
 
- <div class="fadeMe"></div>
+ <div class="fadeMe"></div> <!-- makes background darker -->
  <div class="text">
 <center><h2>You use</h2>
 <h1 id="header">Old Header</h1>
