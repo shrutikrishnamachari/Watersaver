@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">this.obj = this.obj || {};
+var __extends = this.__extends || function(child, parent){
+    for (var p in parent){
+        if (parent.hasOwnProperty(p)){
+            child[p] = parent[p];
+        }
+    }
+    function __(){
+        this.constructor = child;
+    }
+    __.prototype = parent.prototype;
+    child.prototype = new __();
+};
+
+(function (obj){
+
+    var Main = (function(){
+        function Main(){
+            var that = this;
+            this.count = 0;
+            this.stage = new createjs.Stage(document.getElementById("canvas"));
+
+            createjs.Ticker.setFPS(30);
+            createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+            createjs.Ticker.addEventListener("tick", function(e){that.onTickerEvent(e)});
+
+            this.init();
+        }
+
+        var p = Main.prototype;
+
+        p.init = function(){
+            this.wave = new Wave();
+            this.wave.setup(this.stage.canvas.width,this.stage.canvas.height);
+            this.stage.addChild(this.wave);
+        }
+
+        p.onTickerEvent = function(e){
+            if(this.wave){
+                this.wave.update();
+            } 
+        }
+        return Main;
+    })();
+
+     var Wave = (function(_super){
+        __extends(Wave, _super);
+
+        function Wave(){
+            _super.call(this);
+
+            this.count = 0;
+            this.baseNum = 100;
+            this.canvasW = 0;
+            this.canvasH = 0;
+            this.level = 30;
+        }
+
+        var p = Wave.prototype;
+
+        p.update = function(){
+            var oldX = 0;
+            var oldY = 0;
+
+            this.graphics.clear()
+            .beginFill("#44c2ff")
+            .moveTo(0, this.canvasH)
+            .lineTo(0, this.canvasH*0.5);
+
+            for (var i=0; i<=this.baseNum; i++) {
+                var posX = i * (this.canvasW / this.baseNum);
+                var rad = this.culcY(i);
+                var posY = rad * this.level + this.canvasH / 2;
+                var curvX = oldX + (posX - oldX) / 2;
+                var curvY = oldY + (posY - oldY) / 2;
+
+                this.graphics.quadraticCurveTo(curvX, curvY, posX, posY);
+
+                oldX = posX;
+                oldY = posY;
+            }
+
+            this.graphics.lineTo(this.canvasW, this.canvasH);
+            this.graphics.lineTo(0, this.canvasH);
+            this.graphics.closePath();
+            
+            this.getStage().update();
+        }
+
+        p.setup = function(nW, nY){
+            this.canvasW = nW;
+            this.canvasH = nY;
+        }
+
+        p.culcY = function(num){
+            var rad = 0;
+            this.count += 0.001;
+            rad += Math.sin(num * Math.PI / 180 + this.count);
+            return rad;
+        }
+        return Wave;
+     })(createjs.Shape);
+
+    obj.Main = Main;
+    
+})(obj);
+
+window.onload = function(){return new obj.Main();};
+</script>
+<style type="text/css">* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: white;
+  font: 30px sans-serif;
+}</style>
+<body>
+<script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+<canvas id="canvas" width="465" height="465"></canvas>
+</body>
+</html>
