@@ -291,7 +291,61 @@
                 width: 680px;
 
             }
+            .socialfloat {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 9999;
+}
+.socialfloat .fbtn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.socialfloat .fbtn i {
+    font-size: 30px;
+    line-height: 50px;
+}
+.btnz {
+    display: block;
+    float: left;
+    padding: 10px 15px;
+    border:none;
+    background-color: #ececec;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+}
+.btnz:hover {
+    color: #efefef;
+}
+.facebook {
+    background-color: #3b5998;
+}
+.gplus {
+    background-color: #dd4b39;
+}
+.twitter {
+    background-color: #55acee;
+}
+.stumbleupon {
+    background-color: #eb4924;
+}
+.pinterest {
+    background-color: #cc2127;
+}
+.linkedin {
+    background-color: #0077b5;
+}
+.buffer {
+    background-color: #323b43;
+}
         </style>
+        <script src="https://use.fontawesome.com/19ec3c8d9b.js"></script>
+
     </head>
     <body>
 
@@ -458,6 +512,23 @@
                 </div>
             </div>
         </div>
+<!-- Floating Share Buttons Container -->
+<div class="socialfloat">
+    <!-- Facebook Share Button -->
+    <a class="fbtn share facebook" href="http://www.facebook.com/sharer/sharer.php?u=https://d-r-o-p.herokuapp.com/index.html"><i class="fa fa-facebook"></i></a>
+    <!-- Google Plus Share Button -->
+    <a class="fbtn share gplus" href="https://plus.google.com/share?url=https://d-r-o-p.herokuapp.com/index.html"><i class="fa fa-google-plus"></i></a>
+    <!-- Twitter Share Button -->
+    <a class="fbtn share twitter" href="https://twitter.com/intent/tweet?text=DROP&url=https://d-r-o-p.herokuapp.com/index.html&via=TWITTER-HANDLER"><i class="fa fa-twitter"></i></a>
+    <!-- Stumbleupon Share Button -->
+    <a class="fbtn share stumbleupon" href="http://www.stumbleupon.com/submit?url=https://d-r-o-p.herokuapp.com/index.html-URL&title=DROP"><i class="fa fa-stumbleupon"></i></a>
+    <!-- Pinterest Share Button -->
+    <a class="fbtn share pinterest" href="http://pinterest.com/pin/create/button/?url=https://d-r-o-p.herokuapp.com/index.html&description=DROP&media=drop.png"><i class="fa fa-pinterest"></i></a>
+    <!-- LinkedIn Share Button -->
+    <a class="fbtn share linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=DROP&source=https://d-r-o-p.herokuapp.com/index.html"><i class="fa fa-linkedin"></i></a>
+    <!-- Buffer Share Button -->
+    <a class="fbtn share buffer" href="https://buffer.com/add?text=DROP: water saver&url=https://d-r-o-p.herokuapp.com/index.html"><i class="fa fa-share-square-o"></i></a>
+</div>
 
 
     <script>
