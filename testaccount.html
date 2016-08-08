@@ -6,7 +6,7 @@
             .modal {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
+                z-index: 1000; /* Sit on top */
                 padding-top: 100px; /* Location of the box */
                 left: 0;
                 top: 0;
@@ -18,7 +18,7 @@
             .modal1 {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
+                z-index: 1000; /* Sit on top */
                 padding-top: 100px; /* Location of the box */
                 left: 0;
                 top: 0;
@@ -30,7 +30,7 @@
             .modal2 {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
+                z-index: 1000; /* Sit on top */
                 padding-top: 100px; /* Location of the box */
                 left: 0;
                 top: 0;
@@ -42,7 +42,7 @@
             .modal3 {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
+                z-index: 1000; /* Sit on top */
                 padding-top: 100px; /* Location of the box */
                 left: 0;
                 top: 0;
@@ -54,7 +54,7 @@
             .modal4{
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
+                z-index: 1000; /* Sit on top */
                 padding-top: 100px; /* Location of the box */
                 left: 0;
                 top: 0;
@@ -286,11 +286,36 @@
 
             .raindrop {
                 position: absolute;
-                top: 180px;
+                top: 270px;
                 right: 0;
                 width: 680px;
+                z-index: 900;
+                left: 590px;
 
-            }
+            }#demo{
+                position: fixed;
+                left: 1085px;
+                top: 65px;
+                z-index: 100;
+                font-size: 50px;
+                font-family: "Verdana";
+            }#top{
+                left: 1040px;
+                top: 50px;
+                z-index: 100;
+                position: fixed;
+                font-family: "Verdana";
+                font-size: 18px;
+
+             }#bottom{
+left: 1020px;
+                top: 140px;
+                z-index: 100;
+                position: fixed;
+                font-family: "Verdana";
+                font-size: 18px;
+                text-align: center;
+                }
             .socialfloat {
     display: block;
     position: absolute;
@@ -342,20 +367,110 @@
 }
 .buffer {
     background-color: #323b43;
+}#circle1{
+    top: 100px;
+    left: 390px;
+    position: fixed;
+    z-index: .90;
+}#circle2{
+    top: 45px;
+    left: 340px;
+    position: fixed;
+    z-index: 1;
+    opacity: .6;
+}#circle3{
+    top: 75px;
+    left: 365px;
+    position: fixed;
+    z-index: 1;
+    opacity: .8;
+}#circle4{
+    left: 1000px;
+    position: fixed;
+    top: 50px;
+}#circle5{
+    left: 985px;
+    position: fixed;
+    top: 34px;
+    opacity: .6;
+    z-index: 1;
+}#circle6{
+    left: 100px;
+    position: fixed;
+    top: 50px;
+}#circle7{
+    left: 85px;
+    position: fixed;
+    top: 34px;
+    opacity: .6;
+    z-index: 1;
+}#myBtn{
+    position: absolute;
+    top: 180px;
+    left: 450px;
+    z-index: 10;
+
+}#myBtn1{
+    position: absolute;
+    top: 350px;
+    left: 760px;
+    z-index: 10;
+
 }
-        </style>
+   #myBtn2{
+    position: absolute;
+    top: 160px;
+    left: 680px;
+    z-index: 10;
+
+}#myBtn3{
+    position: absolute;
+    top: 350px;
+    left: 430px;
+    z-index: 10;
+
+}#myBtn4{
+    position: absolute;
+    top: 460px;
+    left: 590px;
+    z-index: 10;
+
+}p{
+    position: fixed;
+    z-index: 100;
+    font-family: "Verdana";
+    font-size: 23px;
+    text-align: center;
+    left: 113px;
+    top: 67px;
+    line-height: 1.5;
+}
+     </style>
         <script src="https://use.fontawesome.com/19ec3c8d9b.js"></script>
 
     </head>
-    <body>
+    <body background="bg.jpg">
+
 
 <!-- Trigger/Open The Modal -->
 <!-- <button id="myBtn">Open Modal</button> -->
         
         <div class="raindrop">
-            <h3 id="demo">0</h3>
-            <img id="drop" src="face1.png">
+            
+            <img id="drop" src="waterdrop4.png" width="110">
         </div>
+        <h5 id="top">You've used</h5>
+        <h3 id="demo">0</h3>
+        <h6 id="bottom">gallons of water <br> today!</h6>
+       <img id="circle1" src="circle.png" width="500">
+       <img id="circle3" src="circle.png" width="550">
+       <img id="circle2" src="circle.png" width="600">
+       <img id="circle4" src="circle.png" width="200">
+              <img id="circle5" src="circle.png" width="230">
+              <img id="circle6" src="circle.png" width="200">
+              <img id="circle7" src="circle.png" width="230">
+              <p>Click on <br> the icons to log <br>your water!</p>
+
 
         <img id="myBtn" src="showerheadpng.png" alt="showerhead" height="100" width="100">
         <img id="myBtn1" src="fauceticon.png" alt="faucet" height="100" width="100">
@@ -537,18 +652,30 @@
     function face_changer() {
         var drop = document.getElementById('drop');
         if (count <= 40) {
-            drop.src = "face1.png";
+            drop.src = "waterdrop4.png";
 
         }else if(count<= 80){
-            drop.src = "face2.png"
+            drop.src = "waterdrop2.jpg"
         }
         else if(count<= 120){
-            drop.src = "face3.png"
+            drop.src = "waterdrop3.png"
+        }
+        else if(count<= 140){
+            drop.src = "waterdrop9.png"
         }
         else if(count<= 160){
-            drop.src = "face4.png"
+            drop.src = "waterdrop10.png"
+        }else if(count<= 170){
+            drop.src = "waterdrop5.png"
+        }else if(count<= 180){
+            drop.src = "waterdrop6.png"
         }
-        else {drop.src = "face5.png"}
+        else if(count<= 190){
+            drop.src = "waterdrop7.png"
+        }else if(count<= 200){
+            drop.src = "waterdrop8.png"
+        }
+        else {drop.src = "waterdrop11.png"}
     }
 
 
