@@ -11,11 +11,8 @@ h1 {
  text-align: center;
  bottom: 550px;
  margin-bottom: 10px;
- margin-top: 5px;
- padding: 0;
-
-
 }
+
 p {
 /*makes changes to description*/
  font-family: "Verdana";
@@ -27,6 +24,7 @@ p {
  margin-bottom: 30px;
  padding: 0;
 }
+
 button {
 /*makes changes to button*/
  background-color: #555555;
@@ -48,8 +46,8 @@ button:hover{
 }
 .button {
 	position: absolute;
-	top: 10px;
-	right: 0;
+	top: 20px;
+	right: 20px;
 	width: 90px;
 }
 
@@ -60,8 +58,8 @@ button:hover{
 */
 img {
 	position: absolute;
-	top: 0;
-	right: 590px;
+	top: 10px;
+	right: 20px;
 	 
 }
 
@@ -77,12 +75,13 @@ img {
 }
 
 .dropbtn {
-    margin-top: 0px;
-	margin-left: 0px;
-	background-color: #555555;
-	color: white;
+    margin-top: 15px;
+	margin-left: 10px;
+	background-color: white;
+	color: black;
     cursor: pointer;
-    width: 160px;
+    width: 140px;
+
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -100,6 +99,7 @@ img {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 90;
+    margin-left: 10px;
 }
 
 /* Links inside the dropdown */
@@ -134,6 +134,7 @@ img {
 }
 
 </style>
+
 <script>function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -155,7 +156,7 @@ img {
 <!-- The dropdown menu -->
 <div class="bs-example">
    <div class="dropdown">
-  <button class="dropbtn">Recources</button>
+  <button class="dropbtn">Resources</button>
   <div class="dropdown-content">
     <li><a href="file:///Users/gwc/Desktop/Watersaver/testaccount.html">Track your water</a></li>
     <li><a href="file:///Users/gwc/Desktop/Watersaver/facts.html">Facts</a></li>
