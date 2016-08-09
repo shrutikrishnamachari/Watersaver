@@ -151,6 +151,10 @@ img {
 }.fb-like{
     position: absolute;
     z-index: 10000;
+}#fb{
+    position: absolute;
+    left: 10;
+    top: 10;
 }
 
 </style>
@@ -232,8 +236,7 @@ img {
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+   
     }
   }
 
@@ -300,7 +303,7 @@ img {
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<fb:login-button id="fb" scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
