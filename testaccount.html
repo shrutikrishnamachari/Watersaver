@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+     <link rel="icon" href="drop.png">
         <style>
 /* The Modal (background) */
             .modal {
@@ -294,7 +295,7 @@
 
             }#demo{
                 position: absolute;
-                left: 1070px;
+                left: 1030px;
                 top: 65px;
                 z-index: 100;
                 font-size: 50px;
@@ -753,7 +754,7 @@ position: absolute;
             }
             var element = document.getElementById("demo");
             count += showerGal;
-            element.innerHTML = count;
+            element.innerHTML = Math.round(10*count)/10;
             face_changer()
    
         }
@@ -826,7 +827,7 @@ position: absolute;
 
             var element = document.getElementById("demo");
             count += faucetGal;
-            element.innerHTML = count;
+            element.innerHTML = Math.round(10*count)/10;
             face_changer()
             return faucetGal;
 
@@ -869,7 +870,7 @@ position: absolute;
                 }
             var element = document.getElementById("demo");
             count += washingMachineGal;
-            element.innerHTML = count;
+            element.innerHTML = Math.round(10*count)/10; 
             face_changer()
             return washingMachineGal;
 
@@ -911,7 +912,7 @@ position: absolute;
 
             var element = document.getElementById("demo");
             count += dishWasherGal;
-            element.innerHTML = count;
+            element.innerHTML = Math.round(10*count)/10; 
             face_changer()
             // return dishWasherGal;
   
@@ -943,7 +944,7 @@ position: absolute;
                 }
             var element = document.getElementById("demo");
             count += toiletGal;
-            element.innerHTML = count;
+            element.innerHTML = Math.round(10*count)/10; 
             face_changer()
             return toiletGal;
         }
