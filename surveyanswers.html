@@ -105,7 +105,8 @@ button:hover{
   position: absolute;
   top:0px;
   left: 0px;
-  z-index: 900;
+  right: 0px;
+  z-index: 999;
 
 }
 
@@ -194,6 +195,12 @@ button:hover{
     background-color: #323b43;
 }
 
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 1000;
+}
 
 </style>
 
@@ -258,11 +265,12 @@ var wateryear = waterPerYear();
 
 </script>
 <div id="loader"><img src="drop-loader3.gif"></div> <!-- drop loader -->
-<div id="overlay"><img src="overlay.png" width="1265" height="708"></div> <!-- grey behind drop loader -->
+<div id="overlay"><img src="overlay.png" width="1365" height="708"></div> <!-- grey behind drop loader -->
 <div style="display:none;" id="myDiv" class="animate-bottom"> <!-- hides info while loader is running -->
 
 <body background="waterfall-01.jpg"  onload="myFunction()" style="margin:0;">
 
+<a href="index.html"> <img border="0" alt="W3Schools" src="home.png" height="90" width="100" class="logo"> </a>
 
  <div class="fadeMe"></div> <!-- makes background darker -->
  <div class="text">
