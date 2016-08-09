@@ -2,7 +2,23 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <style>
 h1 {
 /*makes changes to "DROP"*/
@@ -132,6 +148,9 @@ img {
     top: 10px;
     right: 0;
     width: 40px;
+}.fb-like{
+    position: absolute;
+    z-index: 10000;
 }
 
 </style>
@@ -144,7 +163,8 @@ img {
         x.className = "topnav";
     }
 }</script>
-<title>Water Saver</title>
+<title> Water Saver</title>
+<link rel="icon" href="drop.png">
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -153,7 +173,28 @@ img {
 
 <!-- background image -->
 <body background="http://lavageprestige.com/wp-content/uploads/2013/07/bigstock-Clean-water-and-water-bubbles-261313161.jpg">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '296689337362801',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script><div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 <!-- The dropdown menu -->
 <div class="bs-example">
    <div class="dropdown">
