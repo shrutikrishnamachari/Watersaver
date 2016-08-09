@@ -41,7 +41,7 @@ window.onload = alert();
 	opacity: 0.9;
 	z-index: 100;
 	color:white;
-	position: absolute;
+	position: fixed;
 	left:330px;
 	top:60px;
 }
@@ -52,7 +52,9 @@ h1{
 
 }h3{
 	font-size: 50px;
-	}
+	}h6{
+    font-size: 20px;
+  }
 
 button {
 /*makes changes to button*/
@@ -77,17 +79,17 @@ button:hover{
 }
 .button1 {
 	position: absolute;
-	top: 500px;
+	top: 520px;
 	right: 540px;
 	width: 200px;
 }.button2{
-	top:400px;
+	top:420px;
 	position: absolute;
 	right:625px;
 	width:200px;
 
 }.button3{
-	top:400px;
+	top:420px;
 	position: absolute;
 	right:435px;
 	width:200px;
@@ -228,12 +230,29 @@ function showPage() {
 
   function waterPerDay(){ //calculates water per day
     var waterDay = l / 7;
-    return waterDay;
+    return Math.round(10*waterDay)/10;
 }
 function waterPerYear(){ //calculates water per year
     var waterYear =l * 52;
-    return waterYear;
+    return Math.round(10*waterYear)/10;
+}function percent(){
+  var x = 100*(waterPerDay() / 90);
+  if (x>=100) {
+    var percent = x - 100;
+  }else{
+    var percent = 100 - x;
+  }
+  return Math.round(10*percent)/10;
+}function moreOrLess(){
+  if (percent >= 100) {
+    return "more";
+
+  }else{
+    return "less";
+  }
 }
+var percent = percent();
+var word = moreOrLess();
 var waterday = waterPerDay();
 var wateryear = waterPerYear();
 
@@ -250,6 +269,7 @@ var wateryear = waterPerYear();
 <center><h2>You use</h2>
 <h1 id="header">Old Header</h1>
 <h3>gallons of water per week!</h3></center>
+<h6 id="header4">blank</h6>
 <h4 id="header2">blank</h4>
 <h5 id="header3">blank</h5>
 </div>
@@ -260,6 +280,8 @@ var element2 = document.getElementById("header2");
 element2.innerHTML =(waterday + " gallons per day,");
 var element3 = document.getElementById("header3");
 element3.innerHTML = ("and " + wateryear+ " gallons per year.");
+var element4 = document.getElementById("header4");
+element4.innerHTML = ("That's " + percent +"% " + word + " water than the average American!");
 </script>
 
 <div class="button1">
