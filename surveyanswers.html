@@ -242,15 +242,19 @@ function showPage() {
 function waterPerYear(){ //calculates water per year
     var waterYear =l * 52;
     return Math.round(10*waterYear)/10;
-}function percent(){
+}function divide(){
   var x = 100*(waterPerDay() / 90);
+  return x;
+  
+}function percent(){
   if (x>=100) {
     var percent = x - 100;
   }else{
     var percent = 100 - x;
   }
   return Math.round(10*percent)/10;
-}function moreOrLess(){
+}
+function moreOrLess(){
   if (percent >= 100) {
     return "more";
 
@@ -258,6 +262,7 @@ function waterPerYear(){ //calculates water per year
     return "less";
   }
 }
+var x = divide();
 var percent = percent();
 var word = moreOrLess();
 var waterday = waterPerDay();
