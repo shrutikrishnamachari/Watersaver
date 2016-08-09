@@ -415,7 +415,7 @@
     position: absolute;
     top: 350px;
     left: 760px;
-    z-index: 2000;
+    z-index: 1000;
 
 }
    #myBtn2{
@@ -453,6 +453,25 @@
   right: 0px;
   z-index: 1000;
 }
+
+#bfs {
+position: absolute;
+  top: 35px;
+  left: 15px;
+}
+
+#kfs {
+position: absolute;
+  top: 130px;
+  left: 15px;
+}
+#ofs {
+position: absolute;
+  top: 230px;
+  left: 15px;
+}
+
+
      </style>
         <script src="https://use.fontawesome.com/19ec3c8d9b.js"></script>
 
@@ -527,7 +546,9 @@
                       <h2>Faucets</h2>
                 </div>
                 <div class="modal1-body">
-                    <p>Bathroom Faucets</p>
+                    <p id="bfs">Bathroom Faucets</p>
+                    <br>
+                   
 <!-- Select the type of bathroom faucet. -->
                         <select id = "bathfaucettype" required>
                             <option value="">Select</option>
@@ -540,9 +561,11 @@
                             <label for="usr">How long was your use (in minutes)?:</label>
                             <input type="text" class="form-control" id="bathfaucettime">
                         </div>
-
-<!-- The second type of faucet is the Kitchen Faucet. -->
-                    <p>Kitchen Faucets</p>
+                        <br>
+                       
+<!-- The second type of faucet is the Kitchen Faucet.          
+ -->                            <br> <p id="kfs">Kitchen Faucets</p> <br>
+                                
 <!-- Select type
  -->                        <select id = "kitchenfaucettype" required>
                             <option value="">Select</option>
@@ -556,7 +579,10 @@
                             <input type="text" class="form-control" id="kitchenfaucettime">
                         </div>
 <!-- The last faucet category is "others"
- -->                    <p>Other Faucets</p>
+ -->                    <p id="ofs">Other Faucets</p>
+                        <br>
+                        <br>
+                        <br>
 <!--  Select type-->                          
                             <select id = "otherfaucettype" required>
                             <option value="">Select</option>
