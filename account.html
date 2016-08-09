@@ -1,88 +1,27 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<head>
-<script>
-$ npm install stormpath
-export STORMPATH_CLIENT_APIKEY_ID=3NX0SHUUUPXEMI8SWR4YSKT8C
-export STORMPATH_CLIENT_APIKEY_SECRET=AoMNKfwKPrkZQzEVUYDG7SRTiM7g9ppDYZT+QTH69v8
-export STORMPATH_APPLICATION_HREF=https://api.stormpath.com/v1/applications/6d8jYk5y6FtwkIqVQe7UUh
-</script>
-	<title></title>
-</head>
-<body>
-<script>
-	var stormpath = require('stormpath');
-	var apiKey = new stormpath.ApiKey(
-  process.env['STORMPATH_CLIENT_APIKEY_ID'],
-  process.env['STORMPATH_CLIENT_APIKEY_SECRET']
-);
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="604455573536-mdellcvjbftj23cdav5sg9emrnldfl9j.apps.googleusercontent.com.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-var client = new stormpath.Client({ apiKey: apiKey });
-var applicationHref = process.env['STORMPATH_APPLICATION_HREF'];
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
-client.getApplication(applicationHref, function(err, application) {
-  console.log('Application:', application);
-});
-var account = {
-  givenName: 'Joe',
-  surname: 'Stormtrooper',
-  username: 'tk421',
-  email: 'tk421@stormpath.com',
-  password: 'Changeme1',
-  customData: {
-    favoriteColor: 'white'
-  }
-};
-
-application.createAccount(account, function(err, createdAccount) {
-  console.log('Account:', createdAccount);
-});
-application.getAccounts({ username: 'tk421' }, function(err, accounts) {
-  accounts.each(function(account, callback) {
-    console.log('Account:', account);
-    callback();
-  }, function(err) {
-    console.log('Finished iterating over accounts.');
-  });
-});
-var authRequest = {
-  username: 'tk421',
-  password: 'Changeme1'
-};
-
-application.authenticateAccount(authRequest, function(err, result) {
-  // If successful, the authentication result will have a method,
-  // getAccount(), for getting the authenticated account.
-  result.getAccount(function(err, account) {
-    console.log('Account:', account);
-  });
-};
-var email = 'tk421@stormpath.com';
-
-application.sendPasswordResetEmail({ email: email }, function(err, passwordResetToken) {
-  // The token is the last part of the HREF.
-  console.log(passwordResetToken.href.split('/').pop());
-
-  // The account can be retrieved by using the getAccount() method.
-  client.getAccount(passwordResetToken.account.href, function(err, account) {
-    console.log('Account:', account);
-  });
-});
-var token = req.body.token;
-var password = req.body.password;
-
-application.resetPassword(token, password, function(err, result) {
-  if (err) {
-    // The token has been used or is expired - have the user request a new token.
-    return console.error(err);
-  }
-
-  // The response contains a link to the account which is
-  // associated with this password reset workflow.
-  console.log('Account HREF:', result.account.href);
-});
-</script>
-
-</body>
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  </body>
 </html>
