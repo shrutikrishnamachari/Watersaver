@@ -30,7 +30,7 @@
             .modal2 {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
-                z-index: 1000; /* Sit on top */
+                z-index: 2000; /* Sit on top */
                 padding-top: 100px; /* Location of the box */
                 left: 0;
                 top: 0;
@@ -294,13 +294,13 @@
 
             }#demo{
                 position: absolute;
-                left: 1085px;
+                left: 1070px;
                 top: 65px;
                 z-index: 100;
                 font-size: 50px;
                 font-family: "Verdana";
             }#top{
-                left: 1040px;
+                left: 1025px;
                 top: 50px;
                 z-index: 100;
                 position: absolute;
@@ -308,15 +308,16 @@
                 font-size: 18px;
 
              }#bottom{
-left: 1020px;
+                left: 1005px;
                 top: 140px;
                 z-index: 100;
-                position: fixed;
+                position: absolute;
                 font-family: "Verdana";
                 font-size: 18px;
                 text-align: center;
                 }
-            .socialfloat {
+
+    .socialfloat {
     display: block;
     position: absolute;
     left: 0;
@@ -385,13 +386,13 @@ left: 1020px;
     z-index: 1;
     opacity: .8;
 }#circle4{
-    left: 1000px;
-    position: absolute;
-    top: 50px;
-}#circle5{
     left: 985px;
     position: absolute;
-    top: 34px;
+    top: 52px;
+}#circle5{
+    left: 970px;
+    position: absolute;
+    top: 36px;
     opacity: .6;
     z-index: 1;
 }#circle6{
@@ -408,32 +409,32 @@ left: 1020px;
     position: absolute;
     top: 180px;
     left: 450px;
-    z-index: 10;
+    z-index: 100;
 
 }#myBtn1{
     position: absolute;
     top: 350px;
     left: 760px;
-    z-index: 10;
+    z-index: 2000;
 
 }
    #myBtn2{
     position: absolute;
     top: 160px;
     left: 680px;
-    z-index: 10;
+    z-index: 100;
 
 }#myBtn3{
     position: absolute;
     top: 350px;
     left: 430px;
-    z-index: 10;
+    z-index: 100;
 
 }#myBtn4{
     position: absolute;
     top: 460px;
     left: 590px;
-    z-index: 10;
+    z-index: 100;
 
 }p{
     position: absolute;
@@ -448,7 +449,7 @@ left: 1020px;
 
 .logo {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 0px;
   z-index: 1000;
 }
@@ -542,8 +543,8 @@ left: 1020px;
 
 <!-- The second type of faucet is the Kitchen Faucet. -->
                     <p>Kitchen Faucets</p>
-<!-- Select type -->
-                        <select id = "kitchenfaucettype" required>
+<!-- Select type
+ -->                        <select id = "kitchenfaucettype" required>
                             <option value="">Select</option>
                             <option value="Standard">Standard</option>
                             <option value="Energy Saving">Energy Saving</option>
@@ -554,29 +555,29 @@ left: 1020px;
                             <label for="usr">How long was your use (in minutes)?:</label>
                             <input type="text" class="form-control" id="kitchenfaucettime">
                         </div>
-<!-- The last faucet category is "others" -->
-                    <p>Other Faucets</p>
-<!-- Select type -->
-                        <select id = "otherfaucettype" required>
+<!-- The last faucet category is "others"
+ -->                    <p>Other Faucets</p>
+<!--  Select type-->                          
+                            <select id = "otherfaucettype" required>
                             <option value="">Select</option>
                             <option value="Standard">Standard</option>
                             <option value="Energy Saving">Energy Saving</option>
                         </select>
 <!-- Length -->
-                        <div class="form-group">
+                            <div class="form-group">
                             <label for="usr">How long was your use (in minutes)?:</label>
                             <input type="text" class="form-control" id="otherfaucettime">
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
-<!-- The Modal -->
-        <div id="myModal2" class="modal2">
+<!-- The Modal-->        
+                <div id="myModal2" class="modal2">
 
-<!-- Modal content -->
-            <div class="modal2-content">
+<!-- Modal content-->            
 
+                <div class="modal2-content">
                 <div class="modal2-header">
                     <span class="close2">Submit</span>
                     <h2>Washing Machine</h2>
@@ -594,11 +595,12 @@ left: 1020px;
             </div>
         </div>
    
-<!-- The Modal -->
+The Modal
         <div id="myModal3" class="modal3">
 
-<!-- Modal content -->
-            <div class="modal3-content">
+<!-- Modal content-->            
+                
+                <div class="modal3-content">
                 <div class="modal3-header">
                     <span class="close3">Submit</span>
                     <h3>Dishwasher</h3>
